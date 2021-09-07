@@ -1,0 +1,40 @@
+<div>
+    <p>
+        In this page, you can try <strong>ShadowBlock</strong>'s blocking capabilities.
+        Please note that the extension does not have any code that is specific to this page.
+        It runs the same code that is used in <code>ygosu.com</code> and <code>ppss.kr</code>.
+    </p>
+    <p>
+        There are two images below, the red one is an ordinary image, and the blue one is an image that uses "shadow DOM".
+        <br>
+        Also, below the second, blue image, there is a message indicating this site's attempt to detect whether the image is being hidden or not.
+        If you have done nothing for this page yet, it should be saying "Blue image is not being blocked".
+    </p>
+    <p>
+        Most adblockers have "Element picker" tool that allows you to pick an element in a page to block it.
+    </p>
+
+    <ul>
+        <li>Adblock Plus: <a href="https://help.eyeo.com/adblockplus/block-item-or-element" target="_blank">https://help.eyeo.com/adblockplus/block-item-or-element</a></li>
+        <li>uBlock Origin: <a href="https://github.com/gorhill/uBlock/wiki/Element-picker" target="_blank">https://github.com/gorhill/uBlock/wiki/Element-picker</a></li>
+        <li>AdGuard: <a href="https://kb.adguard.com/en/browser-extensions/overview.html#assistant" target="_blank">https://kb.adguard.com/en/browser-extensions/overview.html#assistant</a></li>
+    </ul>
+    <p>
+        1. Try to block the ordinary(red) image with those tools. There should be no problem in doing so.
+    </p>
+    <p>
+        2. Now try to block the shadow(blue) image with those tools. Some tools may be unable to do so, while some can. If it can't, add this adblocking rule by hand to your adblocker's filter: <code>shadow-b1ock.github.io##img</code>
+        Then the message below the blue image will be changed to "Blue image is being blocked".
+    </p>
+    <p>
+        3. Now time to see the difference. Remove all the previously-installed extensions and install ShadowBlock, and refresh the page.
+    </p>
+    <p>
+        You should be able to observe that the blue image is now being blocked, and the message below it still indicates that "Blue image is not being blocked".
+    </p>
+
+    <p>This blue image is a simplified version of what certain ads recently started to appear in the supported websites uses.</p>
+</div>
+
+<img width=300 height=300 src="./red.png">
+<script src="generate_blue_image.js"></script>
